@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { getRemaining } from '../lib/time.js'
+import { getRemaining } from './time.js'
 
 /**
  * Live countdown to a fixed ISO instant. Re-renders once per second,
@@ -20,8 +20,6 @@ export function useCountdown(targetISO) {
 
       if (next.isComplete) return
 
-      // Align the next tick to the real start of the next second rather
-      // than trusting a naive 1000ms interval, which drifts over time.
       const msIntoSecond = Date.now() % 1000
       const delay = 1000 - msIntoSecond
       timeoutId = setTimeout(tick, delay)
