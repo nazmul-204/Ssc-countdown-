@@ -1,8 +1,8 @@
-import { EXAMS } from './lib/time.js'
-import { useCountdown } from './hooks/useCountdown.js'
-import TicketCard from './components/TicketCard.jsx'
-import BackgroundFX from './components/BackgroundFX.jsx'
-import Footer from './components/Footer.jsx'
+import { EXAMS } from './time.js'
+import { useCountdown } from './useCountdown.js'
+import TicketCard from './TicketCard.jsx'
+import BackgroundFX from './BackgroundFX.jsx'
+import Footer from './Footer.jsx'
 
 const [testExam, sscExam] = EXAMS
 
